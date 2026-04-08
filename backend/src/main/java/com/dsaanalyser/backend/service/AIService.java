@@ -18,7 +18,7 @@ public class AIService {
         this.apiKey = apiKey;
     }
 
-    public ProblemAnalysis generateAnalysis(String resumeText, String jobDescription) {
+    public ProblemAnalysis generateAnalysis(String question, String answer) {
         String prompt = buildPrompt(resumeText, jobDescription);
 
         String safeContent = prompt
