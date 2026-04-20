@@ -1,0 +1,88 @@
+.problems-page { padding: 40px 0 80px; }
+
+.problems-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.problems-title {
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+.problems-sub { font-size: 13px; }
+
+/* Filters */
+.filters-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  padding: 16px 20px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.search-input { max-width: 240px; }
+.filter-group { display: flex; align-items: center; gap: 6px; }
+.filter-label { font-size: 12px; flex-shrink: 0; }
+.filter-btn {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  transition: all var(--transition);
+}
+.filter-btn:hover { background: var(--bg-elevated); color: var(--text-primary); }
+.filter-btn.active {
+  background: var(--amber-glow);
+  color: var(--amber);
+  border-color: var(--amber-dim);
+}
+.tag-select {
+  padding: 4px 10px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid var(--border);
+}
+
+/* Table */
+.problems-table { display: flex; flex-direction: column; gap: 4px; }
+.table-head {
+  display: grid;
+  grid-template-columns: 50px 1fr 120px 200px 120px;
+  padding: 8px 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+}
+.table-row {
+  display: grid;
+  grid-template-columns: 50px 1fr 120px 200px 120px;
+  align-items: center;
+  padding: 14px 20px;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+.table-row:hover { background: var(--bg-elevated); }
+
+.row-num  { font-size: 12px; }
+.row-title { font-size: 14px; color: var(--text-primary); font-weight: 500; }
+.row-tags { display: flex; gap: 4px; flex-wrap: wrap; }
+.row-complexity { font-size: 12px; font-family: var(--font-mono); }
+
+/* States */
+.problems-loading, .problems-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 60px;
+}

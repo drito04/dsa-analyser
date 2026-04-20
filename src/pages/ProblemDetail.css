@@ -1,0 +1,175 @@
+.detail-page {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  height: calc(100vh - 56px);
+  overflow: hidden;
+}
+
+/* Left panel */
+.detail-left {
+  padding: 28px 24px;
+  overflow-y: auto;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.detail-top-bar { display: flex; align-items: center; justify-content: space-between; }
+.back-link { font-size: 13px; transition: color var(--transition); }
+.back-link:hover { color: var(--text-primary); }
+
+.detail-title {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+.detail-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.detail-section { display: flex; flex-direction: column; gap: 8px; }
+.section-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-faint);
+}
+.detail-description {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+}
+.constraints-block {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+.optimal-hint {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  padding: 10px 14px;
+  background: var(--amber-glow);
+  border: 1px solid var(--border-glow);
+  border-radius: var(--radius);
+}
+.optimal-hint code { font-family: var(--font-mono); font-weight: 600; }
+
+/* Right panel */
+.detail-right {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.editor-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-surface);
+  flex-shrink: 0;
+}
+.lang-tabs { display: flex; gap: 4px; }
+.lang-tab {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  transition: all var(--transition);
+}
+.lang-tab:hover { background: var(--bg-elevated); color: var(--text-primary); }
+.lang-tab.active { background: var(--amber-glow); color: var(--amber); }
+
+.analyze-btn { font-size: 13px; padding: 7px 16px; }
+
+.editor-wrapper {
+  flex: 1;
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Analysis */
+.analysis-alert { margin: 12px 16px 0; }
+
+.analysis-panel {
+  flex-shrink: 0;
+  border-top: 1px solid var(--border);
+  background: var(--bg-surface);
+  max-height: 320px;
+  overflow-y: auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.analysis-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.analysis-title { font-weight: 600; font-size: 13px; color: var(--text-primary); }
+
+.complexity-row { display: flex; gap: 12px; }
+.complexity-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 14px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.complexity-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
+.complexity-val { font-family: var(--font-mono); font-size: 14px; font-weight: 600; }
+
+.feedback-section { display: flex; flex-direction: column; gap: 8px; }
+.feedback-body {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+}
+
+/* States */
+.detail-loading, .detail-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 80px;
+  text-align: center;
+}
+
+.hints-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hint-item {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  padding: 10px 14px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.hint-num {
+  font-weight: 600;
+  flex-shrink: 0;
+}
